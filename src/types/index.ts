@@ -28,6 +28,7 @@ export interface Worker {
   phone: string;
   rating: number;
   verificationStatus: VerificationStatus;
+  status?: VerificationStatus; // Alias for verificationStatus
   policeVerified: boolean;
   aadhaarLinked: boolean;
   riskLevel: RiskLevel;
@@ -35,6 +36,7 @@ export interface Worker {
   backgroundCheckStatus: 'completed' | 'pending' | 'failed';
   lastVerified: string;
   visitCount: number;
+  totalVisits?: number; // Alias for visitCount
   visitHistory: VisitHistory[];
   qrCode?: string;
   address?: string;

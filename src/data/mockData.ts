@@ -12,6 +12,7 @@ export const mockWorkers: Worker[] = [
     phone: '+91 98765 43210',
     rating: 4.8,
     verificationStatus: 'verified',
+    status: 'verified',
     policeVerified: true,
     aadhaarLinked: true,
     riskLevel: 'low',
@@ -19,6 +20,7 @@ export const mockWorkers: Worker[] = [
     backgroundCheckStatus: 'completed',
     lastVerified: '2 hours ago',
     visitCount: 247,
+    totalVisits: 247,
     address: 'Sector 15, Noida, Uttar Pradesh',
     emergencyContact: '+91 98765 43211',
     visitHistory: [
@@ -74,6 +76,7 @@ export const mockWorkers: Worker[] = [
     backgroundCheckStatus: 'completed',
     lastVerified: '1 hour ago',
     visitCount: 189,
+    totalVisits: 189,
     address: 'Dwarka, New Delhi',
     emergencyContact: '+91 98765 43221',
     visitHistory: [
@@ -120,6 +123,7 @@ export const mockWorkers: Worker[] = [
     backgroundCheckStatus: 'completed',
     lastVerified: '3 hours ago',
     visitCount: 412,
+    totalVisits: 412,
     address: 'Gurgaon, Haryana',
     emergencyContact: '+91 98765 43231',
     visitHistory: [
@@ -185,3 +189,6 @@ export const searchWorkersByName = (name: string): Worker[] => {
 export const getAllWorkers = (): Worker[] => {
   return mockWorkers;
 };
+
+// Export workers as alias for compatibility
+export const workers = mockWorkers;

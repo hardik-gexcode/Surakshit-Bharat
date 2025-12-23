@@ -6,7 +6,7 @@ export default function SplashScreen() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/home');
+      navigate('/role-selection');
     }, 2500);
 
     return () => clearTimeout(timer);

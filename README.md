@@ -2,29 +2,57 @@
 
 ## Application Overview
 
-**Surakshit Bharat** is a national gig worker verification platform for India that enables residents to instantly verify delivery personnel, service workers, and other gig economy workers through QR code scanning or ID lookup. The app provides real-time verification status, background check information, and employment details to ensure visitor safety.
+**Surakshit Bharat** is a comprehensive national gig worker verification platform for India with **4 separate user dashboards** for different roles. The system enables residents to verify workers, delivery persons to manage their profiles, companies to manage staff, and police to monitor security risks.
 
 **Tagline:** हर विज़िटर सत्यापित | Every Visitor Verified
 
-## Features
+## 🎯 Four User Dashboards
 
-### Resident Features (No Login Required)
-- ✅ **Quick Verification** - Three methods: QR code scanning, ID number entry, or name search
+### 1. 👤 Resident Dashboard (No Login Required)
+- ✅ **Quick Verification** - QR code scanning, ID entry, or name search
 - ✅ **Instant Results** - Real-time verification with worker photo and status
-- ✅ **Detailed Profiles** - View police verification, employment history, and ratings
-- ✅ **Safety Actions** - Allow entry or report issue functionality
+- ✅ **Detailed Profiles** - Police verification, employment history, ratings
+- ✅ **Safety Actions** - Allow entry or report issue
 - ✅ **Visit History** - Timeline of worker's recent visits
 
-### Worker Features
-- ✅ **Personal QR Code** - Display QR code for scanning
+### 2. 🚚 Delivery Person Dashboard (Phone OTP Login)
+- ✅ **Personal QR Code** - Large scannable QR for residents
 - ✅ **Profile Management** - View verification status and details
-- ✅ **Visit Timeline** - Track visit history
+- ✅ **Visit History** - Track delivery history
+- ✅ **Documents** - Access to verification documents
+- ✅ **Today's Stats** - Deliveries and active hours
 
-### Demo Workers
-The app includes 3 pre-configured demo workers:
-1. **Rahul Kumar** (SW001) - Swiggy Delivery Partner
-2. **Priya Sharma** (ZM002) - Zomato Delivery Partner
-3. **Rajesh Yadav** (AE003) - AePS Banking Agent
+### 3. 🏢 Company Admin Dashboard (Email + Password Login)
+- ✅ **Staff Management** - View, approve, reject staff members
+- ✅ **Analytics** - Total staff, verification rates, trends
+- ✅ **Bulk Upload** - Upload multiple staff at once
+- ✅ **Incident Reports** - Monitor and review incidents
+- ✅ **Search & Filter** - Find staff by name or ID
+
+### 4. 🛡️ Police Super Admin Dashboard (Police ID + OTP Login)
+- ✅ **Global Search** - Search by name, phone, or worker ID
+- ✅ **Risk Dashboard** - High risk, blacklisted, under watch
+- ✅ **Person Details** - Complete profile with criminal history
+- ✅ **Police Actions** - Blacklist, watch list, clear status
+- ✅ **Activity Feed** - Recent incidents and alerts
+
+## 📊 Demo Credentials
+
+| Role | Login Method | Credentials |
+|------|-------------|-------------|
+| **Resident** | None | No login required - direct access |
+| **Delivery** | Phone + OTP | Phone: `9876543210`, OTP: `123456` |
+| **Company** | Email + Password | Email: `admin@swiggy.com`, Password: `admin123` |
+| **Police** | Police ID + OTP | Police ID: `MH01-12345`, OTP: `123456` |
+
+## 📱 Total Screens: 19
+
+1. Splash Screen
+2. Role Selection
+3-8. Resident Dashboard (6 screens)
+9-13. Delivery Dashboard (5 screens)
+14-17. Company Dashboard (4 screens)
+18-19. Police Dashboard (4 screens)
 
 ## Technology Stack
 
@@ -34,18 +62,19 @@ The app includes 3 pre-configured demo workers:
 - **Styling:** Tailwind CSS
 - **Routing:** React Router v7
 - **QR Code:** qrcode library
+- **Authentication:** Mock authentication with localStorage
 - **State Management:** React Context + Hooks
-- **Animations:** Tailwind CSS animations
 
 ## Design System
 
 ### Color Palette
-- **Primary:** Black (#000000)
-- **Secondary:** White (#FFFFFF)
-- **Verified:** Green (#10B981)
-- **Warning:** Orange (#F59E0B)
-- **Danger:** Red (#EF4444)
-- **Tricolor:** Saffron, White, Green (Indian flag colors)
+- **Saffron:** Indian flag top color
+- **White:** Indian flag middle color
+- **Green:** Indian flag bottom color
+- **Verified:** Green (#10B981) - Trusted status
+- **Warning:** Orange (#F59E0B) - Pending status
+- **Danger:** Red (#EF4444) - Blacklisted/High risk
+- **Primary:** Blue - Company admin theme
 
 ### Typography
 - Clean, modern sans-serif fonts
