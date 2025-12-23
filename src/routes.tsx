@@ -1,4 +1,9 @@
-import SamplePage from './pages/SamplePage';
+import SplashScreen from './pages/SplashScreen';
+import HomeScreen from './pages/HomeScreen';
+import QRScannerScreen from './pages/QRScannerScreen';
+import VerificationResultScreen from './pages/VerificationResultScreen';
+import WorkerProfileScreen from './pages/WorkerProfileScreen';
+import SearchResultsScreen from './pages/SearchResultsScreen';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -10,9 +15,40 @@ interface RouteConfig {
 
 const routes: RouteConfig[] = [
   {
-    name: 'Sample Page',
+    name: 'Splash',
     path: '/',
-    element: <SamplePage />
+    element: <SplashScreen />,
+    visible: false
+  },
+  {
+    name: 'Home',
+    path: '/home',
+    element: <HomeScreen />,
+    visible: false
+  },
+  {
+    name: 'QR Scanner',
+    path: '/scanner',
+    element: <QRScannerScreen />,
+    visible: false
+  },
+  {
+    name: 'Verification Result',
+    path: '/verify/:id',
+    element: <VerificationResultScreen />,
+    visible: false
+  },
+  {
+    name: 'Worker Profile',
+    path: '/profile/:id',
+    element: <WorkerProfileScreen />,
+    visible: false
+  },
+  {
+    name: 'Search Results',
+    path: '/search',
+    element: <SearchResultsScreen />,
+    visible: false
   }
 ];
 

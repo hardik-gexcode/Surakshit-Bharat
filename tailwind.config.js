@@ -59,13 +59,21 @@ export default {
                     DEFAULT: 'hsl(var(--card))',
                     foreground: 'hsl(var(--card-foreground))'
                 },
-                education: {
-                    blue: 'hsl(var(--education-blue))',
-                    green: 'hsl(var(--education-green))'
+                verified: {
+                    DEFAULT: 'hsl(var(--verified))',
+                    foreground: 'hsl(var(--verified-foreground))'
                 },
-                success: 'hsl(var(--success))',
-                warning: 'hsl(var(--warning))',
-                info: 'hsl(var(--info))',
+                warning: {
+                    DEFAULT: 'hsl(var(--warning))',
+                    foreground: 'hsl(var(--warning-foreground))'
+                },
+                danger: {
+                    DEFAULT: 'hsl(var(--danger))',
+                    foreground: 'hsl(var(--danger-foreground))'
+                },
+                saffron: 'hsl(var(--saffron))',
+                green: 'hsl(var(--green))',
+                navy: 'hsl(var(--navy))',
                 sidebar: {
                     DEFAULT: 'hsl(var(--sidebar-background))',
                     background: 'hsl(var(--sidebar-background))',
@@ -135,13 +143,42 @@ export default {
                         opacity: '1',
                         transform: 'translateX(0)'
                     }
+                },
+                'slide-up': {
+                    from: {
+                        opacity: '0',
+                        transform: 'translateY(20px)'
+                    },
+                    to: {
+                        opacity: '1',
+                        transform: 'translateY(0)'
+                    }
+                },
+                'pulse-green': {
+                    '0%, 100%': {
+                        opacity: '1'
+                    },
+                    '50%': {
+                        opacity: '0.7'
+                    }
+                },
+                'tricolor-spin': {
+                    '0%': {
+                        transform: 'rotate(0deg)'
+                    },
+                    '100%': {
+                        transform: 'rotate(360deg)'
+                    }
                 }
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
                 'fade-in': 'fade-in 0.5s ease-out',
-                'slide-in': 'slide-in 0.5s ease-out'
+                'slide-in': 'slide-in 0.5s ease-out',
+                'slide-up': 'slide-up 0.6s ease-out',
+                'pulse-green': 'pulse-green 2s ease-in-out infinite',
+                'tricolor-spin': 'tricolor-spin 1.5s linear infinite'
             }
         }
     },
