@@ -11,15 +11,11 @@
 ### 1. 👤 Resident Dashboard (No Login Required)
 - ✅ **Quick Verification** - QR code scanning, ID entry, or name search
 - ✅ **Instant Results** - Real-time verification with worker photo and status
-- ✅ **Face Verification** - Scan delivery person's face for biometric verification
 - ✅ **Detailed Profiles** - Police verification, employment history, ratings
 - ✅ **Safety Actions** - Allow entry or report issue
-- ✅ **SOS Emergency** - Emergency alert button for critical situations
 - ✅ **Visit History** - Timeline of worker's recent visits
 
 ### 2. 🚚 Delivery Person Dashboard (Phone OTP Login)
-- ✅ **Self Registration** - Create new account with document upload
-- ✅ **Document Upload** - Aadhaar card, photo, police verification
 - ✅ **Personal QR Code** - Large scannable QR for residents
 - ✅ **Profile Management** - View verification status and details
 - ✅ **Visit History** - Track delivery history
@@ -28,7 +24,6 @@
 
 ### 3. 🏢 Company Admin Dashboard (Email + Password Login)
 - ✅ **Staff Management** - View, approve, reject staff members
-- ✅ **Real-time Notifications** - SOS alerts, risk reports, incidents
 - ✅ **Analytics** - Total staff, verification rates, trends
 - ✅ **Bulk Upload** - Upload multiple staff at once
 - ✅ **Incident Reports** - Monitor and review incidents
@@ -36,7 +31,6 @@
 
 ### 4. 🛡️ Police Super Admin Dashboard (Police ID + OTP Login)
 - ✅ **Global Search** - Search by name, phone, or worker ID
-- ✅ **Emergency Notifications** - Critical SOS alerts in real-time
 - ✅ **Risk Dashboard** - High risk, blacklisted, under watch
 - ✅ **Person Details** - Complete profile with criminal history
 - ✅ **Police Actions** - Blacklist, watch list, clear status
@@ -51,45 +45,14 @@
 | **Company** | Email + Password | Email: `admin@swiggy.com`, Password: `admin123` |
 | **Police** | Police ID + OTP | Police ID: `MH01-12345`, OTP: `123456` |
 
-## 📱 Total Screens: 21
+## 📱 Total Screens: 19
 
 1. Splash Screen
 2. Role Selection
 3-8. Resident Dashboard (6 screens)
-9. **Face Verification Screen** (NEW)
-10-15. Delivery Dashboard (6 screens including registration)
-16-19. Company Dashboard (4 screens)
-20-21. Police Dashboard (4 screens)
-
-## 🆕 New Features
-
-### Face Verification
-- Real-time camera access for face scanning
-- Biometric verification of delivery persons
-- Success/failure result display
-- Integrated into resident verification flow
-
-### Delivery Person Registration
-- Self-service account creation
-- Multi-step registration form
-- Document upload (Aadhaar, Photo, Police Verification)
-- Phone OTP verification
-- Pending approval workflow
-
-### SOS & Emergency Alerts
-- Emergency SOS button for residents
-- Real-time notifications to Police and Company
-- Worker information included in alerts
-- Confirmation dialog to prevent false alarms
-- Severity levels (critical, high, medium, low)
-
-### Notification System
-- Real-time notification bell for Police and Company
-- Unread count badge
-- Notification types: SOS, Risk, Incident, Info
-- Click to view worker details
-- Persistent storage across sessions
-- Time-based formatting
+9-13. Delivery Dashboard (5 screens)
+14-17. Company Dashboard (4 screens)
+18-19. Police Dashboard (4 screens)
 
 ## Technology Stack
 
@@ -280,3 +243,5 @@ You can also check the help documentation: Download and Building the app（ [htt
 **Copyright © 2025 Surakshit Bharat**
 
 *Making India Safer, One Verification at a Time*
+=======
+# Surakshit-Bharat
