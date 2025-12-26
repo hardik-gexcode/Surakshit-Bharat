@@ -5,7 +5,9 @@ import QRScannerScreen from './pages/QRScannerScreen';
 import VerificationResultScreen from './pages/VerificationResultScreen';
 import WorkerProfileScreen from './pages/WorkerProfileScreen';
 import SearchResultsScreen from './pages/SearchResultsScreen';
+import FaceVerificationScreen from './pages/FaceVerificationScreen';
 import DeliveryLoginScreen from './pages/DeliveryLoginScreen';
+import DeliveryRegistrationScreen from './pages/DeliveryRegistrationScreen';
 import DeliveryDashboardScreen from './pages/DeliveryDashboardScreen';
 import DeliveryQRScreen from './pages/DeliveryQRScreen';
 import CompanyLoginScreen from './pages/CompanyLoginScreen';
@@ -68,11 +70,23 @@ const routes: RouteConfig[] = [
     element: <SearchResultsScreen />,
     visible: false
   },
+  {
+    name: 'Face Verification',
+    path: '/face-verify/:id',
+    element: <FaceVerificationScreen />,
+    visible: false
+  },
   // Delivery Person Routes
   {
     name: 'Delivery Login',
     path: '/delivery/login',
     element: <DeliveryLoginScreen />,
+    visible: false
+  },
+  {
+    name: 'Delivery Registration',
+    path: '/delivery/register',
+    element: <DeliveryRegistrationScreen />,
     visible: false
   },
   {

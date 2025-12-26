@@ -152,6 +152,19 @@ export default function DeliveryLoginScreen() {
               <p className="text-xs text-muted-foreground">Phone: 9876543211</p>
               <p className="text-xs text-muted-foreground">OTP: 123456</p>
             </div>
+
+            <div className="mt-4 text-center">
+              <p className="text-sm text-muted-foreground mb-2">
+                Don't have an account?
+              </p>
+              <Button
+                variant="outline"
+                className="w-full"
+                onClick={() => navigate('/delivery/register')}
+              >
+                Create New Account | नया खाता बनाएं
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>

@@ -8,6 +8,7 @@ import { useRoleAuth } from '@/contexts/RoleAuthContext';
 import { Search, AlertTriangle, Shield, Eye, LogOut } from 'lucide-react';
 import { useEffect } from 'react';
 import { policeStats } from '@/data/mockAuth';
+import NotificationBell from '@/components/NotificationBell';
 
 export default function PoliceDashboardScreen() {
   const navigate = useNavigate();
@@ -47,16 +48,19 @@ export default function PoliceDashboardScreen() {
               </h1>
               <p className="text-sm text-muted-foreground">कानून प्रवर्तन पैनल</p>
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => {
-                logout();
-                navigate('/role-selection');
-              }}
-            >
-              <LogOut className="w-5 h-5" />
-            </Button>
+            <div className="flex items-center gap-2">
+              <NotificationBell />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => {
+                  logout();
+                  navigate('/role-selection');
+                }}
+              >
+                <LogOut className="w-5 h-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>

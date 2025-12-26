@@ -5,6 +5,7 @@ import { useRoleAuth } from '@/contexts/RoleAuthContext';
 import { Users, TrendingUp, AlertCircle, LogOut, FileUp } from 'lucide-react';
 import { useEffect } from 'react';
 import { companyStats } from '@/data/mockAuth';
+import NotificationBell from '@/components/NotificationBell';
 
 export default function CompanyDashboardScreen() {
   const navigate = useNavigate();
@@ -31,16 +32,19 @@ export default function CompanyDashboardScreen() {
               <h1 className="text-xl font-bold">{user.company} Admin Panel</h1>
               <p className="text-sm text-muted-foreground">कंपनी प्रशासक पैनल</p>
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => {
-                logout();
-                navigate('/role-selection');
-              }}
-            >
-              <LogOut className="w-5 h-5" />
-            </Button>
+            <div className="flex items-center gap-2">
+              <NotificationBell />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => {
+                  logout();
+                  navigate('/role-selection');
+                }}
+              >
+                <LogOut className="w-5 h-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>

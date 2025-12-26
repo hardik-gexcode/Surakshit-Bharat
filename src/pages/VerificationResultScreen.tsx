@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, AlertTriangle, XCircle, Star, Phone, MapPin, Clock, Eye } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, AlertTriangle, XCircle, Star, Phone, MapPin, Clock, Eye, Scan } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { findWorkerById } from '@/data/mockData';
 import type { Worker } from '@/types';
 import ReportIssueDialog from '@/components/ReportIssueDialog';
+import SOSButton from '@/components/SOSButton';
 
 export default function VerificationResultScreen() {
   const { id } = useParams<{ id: string }>();
@@ -235,6 +236,16 @@ export default function VerificationResultScreen() {
           <ReportIssueDialog workerId={worker.idNumber} workerName={worker.name} />
         </div>
 
+        {/* Face Verification Button */}
+        <Button
+          variant="default"
+          className="w-full bg-primary hover:bg-primary/90"
+          onClick={() => navigate(`/face-verify/${worker.idNumber}`)}
+        >
+          <Scan className="w-4 h-4 mr-2" />
+          Verify Face | चेहरा सत्यापित करें
+        </Button>
+
         <Button
           variant="outline"
           className="w-full"
@@ -242,6 +253,15 @@ export default function VerificationResultScreen() {
         >
           View Full Profile
         </Button>
+
+        {/* SOS Button */}
+        <SOSButton
+          workerId={worker.idNumber}
+          workerName={worker.name}
+          location="Current Location"
+          variant="button"
+          className="w-full"
+        />
       </div>
     </div>
   );
